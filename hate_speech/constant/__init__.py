@@ -19,3 +19,14 @@ APP_PORT = 8080
 DATA_INGESTION_ARTIFACTS_DIR = "DataIngestionArtifacts"
 DATA_INGESTION_BALANCED_DATA_DIR = "HateSpeechDatasetBalanced.csv"
 DATA_INGESTION_RAW_DATA_DIR = "labeled_data.csv"
+
+
+# data transformation constants
+DATA_TRANSFORMATION_ARTIFACTS_DIR = "DataTransfomationArtifacts"
+TRANSFORMED_FILE_NAME = "final.csv"
+DATA_DIR = "data"
+AXIS = 1
+INPLACE = True
+DROP_COLUMNS = ['Unnamed: 0','count','hate_speech','offensive_language','neither']
+LABEL1 = 'Label'
+CLASS = "class"

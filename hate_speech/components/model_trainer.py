@@ -1,5 +1,6 @@
 import os
 import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 import pickle
 import pandas as pd
 from hate_speech.logger import logging
@@ -41,15 +42,20 @@ class ModelTrainer:
         
     
     def tokenizing(self, x_train):
+        
         try:
-            logging.info("apply tokenization on the dat")
+            logging.info("apply tokenization on the data")
+        
+            # Convert all values to strings and fill NaNs with empty strings
+            x_train = x_train.astype(str).fillna('')
+        
             tokenizer = Tokenizer(num_words=self.model_trainer_config.MAX_WORDS)
             tokenizer.fit_on_texts(x_train)
             sequences = tokenizer.texts_to_sequences(x_train)
             logging.info(f"converting text to sequences: {sequences}")
             sequences_matrix = pad_sequences(sequences, maxlen=self.model_trainer_config.MAX_LEN)
             logging.info(f" The sequence matrix is: {sequences_matrix}")
-            return sequences_matrix,tokenizer
+            return sequences_matrix, tokenizer
         except Exception as e:
             raise CustomException(e, sys) from e
         
@@ -66,7 +72,7 @@ class ModelTrainer:
 
         try:
             logging.info("Entered the initiate_model_trainer function ")
-            x_train,x_test,y_train,y_test = self.spliting_data(csv_path=self.data_transformation_artifacts.transformed_data_path)
+            x_train,x_test,y_train,y_test = self.splitting_data(csv_path=self.data_transformation_artifacts.transformed_data_path)
             model_architecture = ModelArchitecture()   
 
             model = model_architecture.get_model()

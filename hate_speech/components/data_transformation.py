@@ -52,16 +52,17 @@ class DataTransformation:
             raise CustomException(e,sys) from e
         
     def concat_dataframe(self):
-
         try:
             logging.info("Entered into the concat_dataframe function")
-            # Let's concatinate both the data into a single data frame.
+            # Let's concatenate both the data into a single data frame.
             frame = [self.raw_data_cleaning(), self.imbalance_data_cleaning()]
             df = pd.concat(frame)
-            print(df.head())
-            logging.info(f"returned the concatinated dataframe {df}")
+            logging.info(f"Returned the concatenated dataframe {df}")
+        
+            # Ensure all tweets are strings and handle NaN values
+            df[self.data_transformation_config.TWEET] = df[self.data_transformation_config.TWEET].astype(str).fillna('')
+        
             return df
-
         except Exception as e:
             raise CustomException(e, sys) from e
         
@@ -99,6 +100,7 @@ class DataTransformation:
             self.imbalance_data_cleaning()
             self.raw_data_cleaning()
             df = self.concat_dataframe()
+            df[self.data_transformation_config.TWEET]=df[self.data_transformation_config.TWEET].apply(self.concat_data_cleaning)
             
             os.makedirs(self.data_transformation_config.DATA_TRANSFORMATION_ARTIFACTS_DIR, exist_ok=True)
             df.to_csv(self.data_transformation_config.TRANSFORMED_FILE_PATH,index=False,header=True)

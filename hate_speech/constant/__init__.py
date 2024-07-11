@@ -51,3 +51,7 @@ LOSS = 'binary_crossentropy'
 METRICS = ['accuracy']
 ACTIVATION = 'sigmoid'
 
+# Model  Evaluation constants
+MODEL_EVALUATION_ARTIFACTS_DIR = 'ModelEvaluationArtifacts'
+BEST_MODEL_DIR = "best_Model"
+MODEL_EVALUATION_FILE_NAME = 'loss.csv'

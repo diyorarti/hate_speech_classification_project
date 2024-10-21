@@ -51,35 +51,35 @@ hate_speech/
 
 # Key Components
 **Data Ingestion**
-Purpose: Downloads the dataset from Google Drive and extracts the necessary files.
-Files:
+    Purpose: Downloads the dataset from Google Drive and extracts the necessary files.
+    Files:
 
-- data_ingestion.py: Handles downloading and extracting files.
-- dvc.yaml: Contains the data pipeline configuration.
-Output: Data is stored in the artifacts/data_ingestion/ folder.
+    - data_ingestion.py: Handles downloading and extracting files.
+    - dvc.yaml: Contains the data pipeline configuration.
+    Output: Data is stored in the artifacts/data_ingestion/ folder.
 **Data Transformation**
-Purpose: Cleans and transforms the dataset for training.
-Files:
-- data_transformation.py: Cleans and balances the data. Output: Transformed data is saved in artifacts/- - data_transformation/.
+    Purpose: Cleans and transforms the dataset for training.
+    Files:
+    - data_transformation.py: Cleans and balances the data. Output: Transformed data is saved in artifacts/- - data_transformation/.
 **Model Training**
-Purpose: Trains an LSTM model on the hate speech dataset.
-Files:
-- model_trainer.py: Handles training and saving the model. Output: The trained model is saved as model.h5 in artifacts/trained_model/.
+    Purpose: Trains an LSTM model on the hate speech dataset.
+    Files:
+    - model_trainer.py: Handles training and saving the model. Output: The trained model is saved as model.h5 in artifacts/trained_model/.
 **Model Evaluation**
-Purpose: Evaluates the trained model using test data.
-Files:
-- model_evaluation.py: Loads the model and computes evaluation metrics. Output: Evaluation results are stored in artifacts/model_evaluation/.
+    Purpose: Evaluates the trained model using test data.
+    Files:
+    - model_evaluation.py: Loads the model and computes evaluation metrics. Output: Evaluation results are stored in artifacts/model_evaluation/.
 **Prediction Pipeline**
-Purpose: Processes input text and returns a prediction for hate speech classification.
-Files:
-- prediction_pipeline.py: Loads the trained model and makes predictions.
+    Purpose: Processes input text and returns a prediction for hate speech classification.
+    Files:
+    - prediction_pipeline.py: Loads the trained model and makes predictions.
 **API Deployment**
-Purpose: Deploys the trained model as an API for predictions.
-Files:
-- app.py: Contains FastAPI routes for training and prediction.
+    Purpose: Deploys the trained model as an API for predictions.
+    Files:
+    - app.py: Contains FastAPI routes for training and prediction.
 **Notebooks**
-Contains Jupyter notebooks for experimentation:
-- hate_speech_classification.ipynb
+    Contains Jupyter notebooks for experimentation:
+    - hate_speech_classification.ipynb
 
 # Installation
 ## Prerequisites

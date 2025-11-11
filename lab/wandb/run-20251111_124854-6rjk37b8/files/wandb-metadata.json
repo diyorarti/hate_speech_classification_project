@@ -1,0 +1,52 @@
+{
+    "os": "Windows-10-10.0.26200-SP0",
+    "python": "3.10.19",
+    "heartbeatAt": "2025-11-11T11:49:01.225617",
+    "startedAt": "2025-11-11T11:48:54.062731",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "<python with no main file>",
+    "codePathLocal": null,
+    "git": {
+        "remote": "https://github.com/diyorarti/hate_speech_classification_project.git",
+        "commit": "dddaf5cfe3f8a31750b51451bcf074d587dc45e8"
+    },
+    "email": "diyorarti@gmail.com",
+    "root": "D:/Users/User/hate_speech_classification_project",
+    "host": "WIN-8NBPOAASB8T",
+    "username": "User",
+    "executable": "d:\\Anaconda\\envs\\hatespeechclassiferAPI\\python.exe",
+    "cpu_count": 2,
+    "cpu_count_logical": 4,
+    "cpu_freq": {
+        "current": 2093.0,
+        "min": 0.0,
+        "max": 2592.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2093.0,
+            "min": 0.0,
+            "max": 2592.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 931.4960899353027,
+            "used": 133.04790878295898
+        }
+    },
+    "gpu": "NVIDIA GeForce MX130",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce MX130",
+            "memory_total": 2147483648
+        }
+    ],
+    "memory": {
+        "total": 11.838184356689453
+    }
+}

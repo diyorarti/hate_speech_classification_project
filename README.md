@@ -96,4 +96,8 @@ You can embed your figures like this (put images in `assets/`):
 ![Confusion Matrix](assets/confusion_matrix.png)
 ![Training vs Validation Accuracy](assets/accuracy_curves.png)
 ```
+### 🧩 Model Performance Summary
 
+The model demonstrates strong and balanced performance with approximately **86% accuracy and macro-F1** on both validation and test sets. It effectively captures hateful content with a **high recall (~0.90)** while maintaining good precision (~0.84), making it suitable for real-world moderation systems where minimizing missed hate speech is critical.  
+
+The **BiGRU + Attention** architecture enables the model to understand both word context and emotional tone, leading to consistent performance across unseen data. The training and validation curves confirm that the model generalizes well without significant overfitting.

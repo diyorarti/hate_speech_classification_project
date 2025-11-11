@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[project] 
+name = "hate-speech-classifier"
+version = "0.1.0"
+description = "Production ready api of hate-speech-classifier model"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Diyorbek Tirkashov" }]
+
+
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]>=0.30.1",
+]

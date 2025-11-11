@@ -15,4 +15,10 @@ class Settings(BaseSettings):
     API_NAME:str = "Production ready API for hate-speech-classifier model"
     API_VERSION:str = "0.1.0"
 
+    # hf configs
+    HF_TOKEN:str = os.getenv("HF_TOKEN")
+    ENDPOINT_URL:str = os.getenv("ENDPOINT_URL")
+
+    REQUEST_TIMEOUT_SECONDS: float = 30
+
 settings = Settings()

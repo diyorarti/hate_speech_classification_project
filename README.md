@@ -101,3 +101,16 @@ You can embed your figures like this (put images in `assets/`):
 The model demonstrates strong and balanced performance with approximately **86% accuracy and macro-F1** on both validation and test sets. It effectively captures hateful content with a **high recall (~0.90)** while maintaining good precision (~0.84), making it suitable for real-world moderation systems where minimizing missed hate speech is critical.  
 
 The **BiGRU + Attention** architecture enables the model to understand both word context and emotional tone, leading to consistent performance across unseen data. The training and validation curves confirm that the model generalizes well without significant overfitting.
+
+### 🧮 Experiment Tracking (Weights & Biases)
+
+All training runs, metrics, and visualizations were tracked in **Weights & Biases (wandb)** for reproducibility and experiment monitoring.  
+You can explore full training logs, learning curves, and performance charts here:
+
+🔗 **[View in Weights & Biases Dashboard](https://wandb.ai/diyor/hate-speech-classifer?nw=nwuserdiyorarti)**
+
+The dashboard includes:
+- Epoch-wise **training & validation accuracy/loss curves**
+- **Precision, recall, and F1-score** evolution
+- Confusion matrices and sample predictions
+- Logged hyperparameters and environment configuration

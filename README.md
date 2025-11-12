@@ -31,13 +31,10 @@ To address this problem, I developed a **Hate Speech Classifier** that automatic
 | **Architecture** | Bidirectional GRU (BiGRU) with Attention Layer |
 | **Framework** | TensorFlow / Keras |
 | **Tokenizer** | Keras Tokenizer with padded sequences |
-| **Training Environment** | Google Colab (GPU) |
-| **Experiment Tracking** | Weights & Biases (wandb) |
 | **Dataset** | [Hate Speech Dataset](https://drive.google.com/file/d/1_XsweOGUzjYDbQqibSvI8M3X1hvycd8F/view?usp=drive_link) |
 | **Repository (Model)** | [Hugging Face Hub](https://huggingface.co/diyorarti/hate-speech-attn-bigru-keras) |
-| **Deployed Model** | [HF Inference Endpoint](PASTE_YOUR_HF_INFERENCE_LINK_HERE) |
-| **Production API** | [Render API Endpoint](PASTE_YOUR_RENDER_API_URL_HERE) |
-
+### Model architecture 
+![Swagger UI Screenshot](assets/model_architecture.png)
 ---
 ## 📊 Model Performance & Evaluation
 
@@ -86,16 +83,6 @@ TN=28,607 · FP=5,957 · FN=4,232 · TP=33,676
 
 ---
 
-### 🔍 Qualitative/Diagnostic Plots
-- **Training vs Validation Accuracy** (steady generalization)
-- **Confusion Matrix** (balanced performance with higher recall on class 1)
-
-You can embed your figures like this (put images in `assets/`):
-
-```md
-![Confusion Matrix](assets/confusion_matrix.png)
-![Training vs Validation Accuracy](assets/accuracy_curves.png)
-```
 ### 🧩 Model Performance Summary
 
 The model demonstrates strong and balanced performance with approximately **86% accuracy and macro-F1** on both validation and test sets. It effectively captures hateful content with a **high recall (~0.90)** while maintaining good precision (~0.84), making it suitable for real-world moderation systems where minimizing missed hate speech is critical.  
